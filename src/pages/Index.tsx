@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
+import RaveenaMap from '@/components/RaveenaMap';
+import QuoteGenerator from '@/components/QuoteGenerator';
+import AwardCeremony from '@/components/AwardCeremony';
+import MemeGenerator from '@/components/MemeGenerator';
+import LifeLessons from '@/components/LifeLessons';
+import MiniGame from '@/components/MiniGame';
+import BehindTheScenes from '@/components/BehindTheScenes';
+import ExperimentsPoll from '@/components/ExperimentsPoll';
+import FuturePredictions from '@/components/FuturePredictions';
+import ThankYou from '@/components/ThankYou';
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "Raveena HQ - Where All the Magic Happens";
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <Navigation />
+      <RaveenaMap />
+      <QuoteGenerator />
+      <AwardCeremony />
+      <MemeGenerator />
+      <LifeLessons />
+      <MiniGame />
+      <BehindTheScenes />
+      <ExperimentsPoll />
+      <FuturePredictions />
+      <ThankYou />
     </div>
   );
 };
